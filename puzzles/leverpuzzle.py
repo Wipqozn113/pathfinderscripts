@@ -104,6 +104,7 @@ class Lever:
         
 count = int(input("Levers to create: "))
 levers = Levers(count)
+levers.PrintLevers()
 while True:
     num = int(input("Pull which lever:"))
     if levers.PullLever(num - 1):
