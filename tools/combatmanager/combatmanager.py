@@ -106,10 +106,7 @@ class Tracker:
                     self.DamageMonster(mon, dmg)
                 elif inp == "list":
                     for monster in self.Monsters:
-                        monster.BasicInfo
-
-
-                
+                        monster.BasicInfo                
 
             # Increment or restart
             n += 1
