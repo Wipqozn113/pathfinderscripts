@@ -85,8 +85,6 @@ def CreateTiles(fname = "mbp.in"):
 
     return tiles
 
-
-
 def PrintTiles(tiles):
     dimensions = sqrt(len(tiles))
     if not dimensions.is_integer():
