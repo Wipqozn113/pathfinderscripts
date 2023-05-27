@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "Pathfinder.CombatManager"
+  "defaultProject": "Pathfinder.CombatManager",
+  "cli": {
+    "analytics": false
+  }
 }
