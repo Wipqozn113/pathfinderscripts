@@ -24,6 +24,9 @@
     <None Remove="Models\Combat\" />
     <None Remove="Models\Stats\" />
     <None Remove="Enums\" />
+    <None Remove="Models\View\Creatures\" />
+    <None Remove="Models\Web\" />
+    <None Remove="Models\Database\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +36,9 @@
     <Folder Include="Models\Stats\" />
     <Folder Include="Enums\" />
     <Folder Include="ClientApp\src\app\combat-tracker\" />
+    <Folder Include="Models\View\Creatures\" />
+    <Folder Include="Models\Web\" />
+    <Folder Include="Models\Database\" />
   </ItemGroup>
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
