@@ -18,15 +18,15 @@ class Room:
          ln = line.split("|")
          self.id = ln[0]
          self.feature = ln[1]
-         self.doors = ln[2].split(" ")
+         self.doors = ln[2].split(",")
          self.players = []
     
     def AddPlayer(self, player):
         self.players.append(player)
 
     def CreateDoors(self, rooms):
-        for i in range(len(rooms)):
-            self.doors[i] = Door(rooms[i])
+        for i in range(len(self.doors)):
+            self.doors[i] = Door(rooms[int(self.doors[i].strip())])
 
     def MovePlayer(self, player, door):
         ply = self.players[player]
@@ -46,5 +46,22 @@ class Room:
             doors += f'({i}) {self.doors[i].feature} '
         print(doors)
         print("")
+
+def ParseInput(filename = "input.in"):
+    rooms = []
+    with open(filename) as file:
+        for line in file:
+            room = Room(line)
+            rooms.append(room)
+    for room in rooms:
+        room.CreateDoors(rooms)
+    
+    return rooms
+
+rooms = ParseInput()
+for room in rooms:
+    room.PrintRoom()
+
+while True:
         
 
